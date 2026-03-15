@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Коллективный блог - Архив статей</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body class="archive">
+        <div class="header parallax-header">
+            <img class="logo" src="{% static 'img/dpb-logo.png' %}" alt="Логотип" />
+            
+            <div class="header-text-area">
+                <p class="service-title">Коллективный блог</p>
+                <div class="auth-links-header">
+                    {% if user.is_authenticated %}
+                        <span class="welcome-text">Привет, {{ user.username }}!</span>
+                        <a href="{% url 'logout' %}" class="register-link">Выйти</a>
+                    {% else %}
+                        <a href="{% url 'register' %}" class="register-link">Регистрация</a>
+                        <a href="{% url 'login' %}" class="register-link">Вход</a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="icons-for-parallax">
+                <img class="icon-for-parallax-first" src="{% static 'img/article-icon-for-parallax.png' %}" alt="Иконка статьи">
+                <img class="icon-for-parallax-second" src="{% static 'img/article-icon-for-parallax.png' %}" alt="Иконка статьи">
+                <img class="icon-for-parallax-third" src="{% static 'img/article-icon-for-parallax.png' %}" alt="Иконка статьи">
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <div class="create-post-link">
+                <a href="{% url 'create_post' %}" class="create-btn">+ Написать статью</a>
+            </div>
+            
+            <div class="archive">
+                {% for post in posts %}
+                <div class="one-post">
+                    <div class="post-management">
+                        <h2 class="post-title">
+                            <a href="{% url 'get_article' article_id=post.id %}">{{ post.title }}</a>
+                        </h2>
+                        <button class="fold-button">свернуть</button>
+                    </div>
+                    <div class="article-info">
+                        <div class="article-author">{{ post.author.username }}</div>
+                        <div class="article-created-date">{{ post.created_date }}</div>
+                    </div>
+                    <p class="article-text">{{ post.get_excerpt }}</p>
+                    <div class="one-post-shadow"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/helloworld.js' %}"></script>
+        <script src="{% static 'js/fold-post-improved.js' %}"></script>
+        <script src="{% static 'js/highlight-post.js' %}"></script>
+        <script src="{% static 'js/parallax.js' %}"></script>
+    </body>
+</html>
