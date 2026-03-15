@@ -8,8 +8,9 @@ body {
 
 .header img {
     display: block;
-    width: 318px;
+    width: 30px;
     margin: 30px auto;
+    height: 30px;
 }
 
 .auth-container {
