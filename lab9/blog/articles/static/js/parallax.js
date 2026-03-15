@@ -1,13 +1,10 @@
 $(document).ready(function() {
-    console.log("Инициализация параллакс-эффекта...");
     
     var yPosition;
     var scrolled = 0;
 
     var $parallaxElements = $('.icons-for-parallax img');
     var $logo = $('.logo');  
-    
-    console.log("Найдено элементов для параллакса:", $parallaxElements.length);
     
     $(window).scroll(function() {
         scrolled = $(window).scrollTop();
@@ -51,5 +48,4 @@ $(document).ready(function() {
         }
     );
     
-    console.log("Параллакс-эффект активирован!");
 });
