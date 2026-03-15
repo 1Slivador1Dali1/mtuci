@@ -16,7 +16,6 @@ def get_article(request, article_id):
 def create_post(request):
     """Создание новой статьи"""
     
-    # Проверяем, авторизован ли пользователь
     if request.user.is_anonymous:
         raise Http404("Только авторизованные пользователи могут создавать статьи")
     

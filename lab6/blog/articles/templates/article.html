@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ post.title }}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body class="article">
+        <div class="header">
+            <img src="{% static 'img/dpb-logo.png' %}" />
+            
+            <div class="user-info">
+                {% if user.is_authenticated %}
+                    <span>Привет, {{ user.username }}!</span>
+                    <a href="{% url 'logout' %}" class="header-link">Выйти</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="header-link">Войти</a>
+                    <a href="{% url 'register' %}" class="header-link">Регистрация</a>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="one-post">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <div class="article-text">
+                    {{ post.text|linebreaksbr }}
+                </div>
+            </div>
+            
+            <div class="back-link">
+                <a href="{% url 'archive' %}">← Все записи</a>
+            </div>
+        </div>
+    </body>
+</html>

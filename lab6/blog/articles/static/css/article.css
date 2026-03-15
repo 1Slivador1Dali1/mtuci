@@ -1,0 +1,157 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header img {
+    display: block;
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    height: 30px;
+}
+
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.one-post {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.post-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.article-info {
+    margin-bottom: 15px;
+    overflow: hidden; 
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+    font-style: italic;
+}
+
+.article-created-date {
+    text-align: right;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.article-text {
+    line-height: 1.6;
+}
+
+.content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article .article-text {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.back-link a:hover {
+    background: #ffffff;
+    color: #1abc9c;
+}
+
+.create-post-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.create-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #27ae60;
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+.create-btn:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.user-info span {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.header-link:hover {
+    background: #fff;
+    color: #1abc9c;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.header img {
+    display: block;
+    width: 30px;
+    margin: 20px auto;
+}
